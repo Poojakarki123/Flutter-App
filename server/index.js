@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT;
 const userName = process.env.DB_USERNAME;
 const password = encodeURIComponent(process.env.DB_PASSWORD);
-const DB = `mongodb+srv://${userName}:${password}@cluster0.fkliyeh.mongodb.net/flutterzon?retryWrites=true&w=majority`
+const DB = `mongodb+srv://${userName}:${password}@cluster0.ygetrx8.mongodb.net/zemen?retryWrites=true&w=majority&appName=Cluster0`;
 
 
 // middleware
