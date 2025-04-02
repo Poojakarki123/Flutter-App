@@ -1,4 +1,4 @@
-part of 'fethc_orders_cubit.dart';
+part of 'fetch_orders_cubit.dart';
 
 sealed class FetchOrdersState extends Equatable {
   const FetchOrdersState();

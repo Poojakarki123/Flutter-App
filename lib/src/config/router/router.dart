@@ -7,7 +7,7 @@ import 'package:flutter_amazon_clone_bloc/src/data/repositories/account_reposito
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/category_products_repository.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/products_repository.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/user_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/fetch_orders/fethc_orders_cubit.dart';
+import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/fetch_orders/fetch_orders_cubit.dart';
 import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/keep_shopping_for/cubit/keep_shopping_for_cubit.dart';
 import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/product_rating/product_rating_bloc.dart';
 import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/wish_list/wish_list_cubit.dart';

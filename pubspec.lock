@@ -77,10 +77,10 @@ packages:
     dependency: transitive
     description:
       name: camera_android
-      sha256: "997f19dbdb1bb0e40bdb87265c7e550abea657fe3c4ba3720f81e97b6d4b64dd"
+      sha256: bd9737671a00d979e0310a946e5be2fdc621b6a36b95378755cb3e4498e61485
       url: "https://pub.dev"
     source: hosted
-    version: "0.10.10+1"
+    version: "0.10.10+2"
   camera_avfoundation:
     dependency: transitive
     description:
@@ -253,10 +253,10 @@ packages:
     dependency: "direct main"
     description:
       name: file_picker
-      sha256: "09b474c0c8117484b80cbebc043801ff91e05cfbd2874d512825c899e1754694"
+      sha256: "36a1652d99cb6bf8ccc8b9f43aded1fd60b234d23ce78af422c07f950a436ef7"
       url: "https://pub.dev"
     source: hosted
-    version: "9.2.3"
+    version: "10.0.0"
   fixnum:
     dependency: transitive
     description:
@@ -814,18 +814,18 @@ packages:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_charts
-      sha256: "06186afb2ee8348697c278336280999da8e5ec8cd13264807b720bee21e47916"
+      sha256: "22d633491d63e0986dc84dd07f7e68e1d2e9796a35b52ba7d39440fa3f79fa11"
       url: "https://pub.dev"
     source: hosted
-    version: "29.1.33"
+    version: "29.1.35"
   syncfusion_flutter_core:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-      sha256: f56ee689d572c86a0d96cc986120a1e81a9cee9ff6d3c33acb030766a2ad1c04
+      sha256: be5eff439bb6c16eb2f297aa3dde779cc5352485f2df1825557d14f09d5b26b6
       url: "https://pub.dev"
     source: hosted
-    version: "29.1.33"
+    version: "29.1.35"
   synchronized:
     dependency: transitive
     description:

@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/account_repository.dart';
 
-part 'fetch_ordres_state.dart';
+part 'fetch_orders_state.dart';
 
 class FetchOrdersCubit extends Cubit<FetchOrdersState> {
   final AccountRepository accountRepository;
@@ -33,7 +33,7 @@ class FetchOrdersCubit extends Cubit<FetchOrdersState> {
       emit(FetchSearchedOrdersLoadingS());
 
       searchedOrdersList =
-          await accountRepository.fetchsearchedOrders(orderQuery);
+          await accountRepository.fetchSearchedOrders(orderQuery);
 
       emit(FetchSearchedOrdersSuccessS(searchedOrdersList: searchedOrdersList));
     } catch (e) {

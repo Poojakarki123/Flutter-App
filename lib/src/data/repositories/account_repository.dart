@@ -33,7 +33,7 @@ class AccountRepository {
     }
   }
 
-  Future<List<Order>> fetchsearchedOrders(String orderQuery) async {
+  Future<List<Order>> fetchSearchedOrders(String orderQuery) async {
     try {
       List<Order> searchedOrderList = [];
       http.Response res = await accountApis.searchOrders(orderQuery);

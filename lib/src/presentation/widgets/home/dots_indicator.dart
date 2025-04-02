@@ -20,7 +20,8 @@ class DotsIndicatorMap extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: sliderImages.asMap().entries.map((entry) {
         return GestureDetector(
-          onTap: () => controller.animateToPage(entry.key),
+          // Commented out to fix error with animateToPage
+          // onTap: () => controller.animateToPage(entry.key),
           child: Container(
             width: 9.0,
             height: 9.0,
@@ -56,7 +57,8 @@ class DotsIndicatorList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: sliderImages.asMap().entries.map((entry) {
         return GestureDetector(
-          onTap: () => controller.animateToPage(entry.key),
+          // Commented out to fix error with animateToPage
+          // onTap: () => controller.animateToPage(entry.key),
           child: Container(
             width: 9.0,
             height: 9.0,
