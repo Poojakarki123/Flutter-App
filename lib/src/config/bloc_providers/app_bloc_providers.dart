@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/account_repository.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/admin_repository.dart';
 import 'package:flutter_amazon_clone_bloc/src/data/repositories/auth_repository.dart';
