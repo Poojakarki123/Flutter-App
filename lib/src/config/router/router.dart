@@ -30,8 +30,8 @@ import 'package:flutter_amazon_clone_bloc/src/presentation/views/cart/cart_scree
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/category_products/category_products_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/home/home_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/menu/menu_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen_buy_now.dart';
+// import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen.dart';
+// import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen_buy_now.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/product_details/product_details_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/search/search_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/splash_screen/splash_screen.dart';
