@@ -124,14 +124,14 @@ class AppBlocProviders {
       ];
 
   // Order related providers
-  static List<BlocProvider> get orderProviders => [
-        BlocProvider(
-          create: (context) => OrderCubit(UserRepository()),
-        ),
-        BlocProvider(
-          create: (context) => PlaceOrderBuyNowCubit(UserRepository()),
-        ),
-      ];
+  // static List<BlocProvider> get orderProviders => [
+  //       BlocProvider(
+  //         create: (context) => OrderCubit(UserRepository()),
+  //       ),
+  //       BlocProvider(
+  //         create: (context) => PlaceOrderBuyNowCubit(UserRepository()),
+  //       ),
+  //     ];
 
   // Admin related providers
   static List<BlocProvider> get adminProviders => [
@@ -163,7 +163,7 @@ class AppBlocProviders {
         ...accountProviders,
         ...productProviders,
         ...cartProviders,
-        ...orderProviders,
+        // ...orderProviders,
         ...adminProviders,
       ];
 }
