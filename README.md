@@ -1,3 +1,4 @@
+
  HEAD
 # Flutter.App
 
@@ -223,3 +224,6 @@ Additionally, be aware that any attempts to place orders within this prototype a
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tejasbadone/flutterzon_bloc/blob/main/LICENSE) file for details
+=======
+"# flutter-app" 
+>>>>>>> 912cf4b (first commit)
