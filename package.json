@@ -1,0 +1,27 @@
+{
+  "name": "flutter-app",
+  "version": "1.0.0",
+  "description": "HEAD\r # Flutter.App",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poojakarki123/Flutter-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poojakarki123/Flutter-App/issues"
+  },
+  "homepage": "https://github.com/Poojakarki123/Flutter-App#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -11,9 +11,9 @@ const userRouter = require('./routes/user');
 const offersRouter = require('./routes/offers');
 const app = express();
 const PORT = process.env.PORT;
-const userName = process.env.DB_USERNAME;
-const password = encodeURIComponent(process.env.DB_PASSWORD);
-const DB = `mongodb+srv://${userName}:${password}@cluster0.ygetrx8.mongodb.net/zemen?retryWrites=true&w=majority&appName=Cluster0`;
+//const userName = process.env.DB_USERNAME;
+//const password = encodeURIComponent(process.env.DB_PASSWORD);
+const DB = `mongodb://localhost:27017/zemen`;
 
 
 // middleware
