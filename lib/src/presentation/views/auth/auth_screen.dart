@@ -470,7 +470,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ]),
                 const Center(
                   child: Text(
-                    '© 1996-2023, Amazon.com, Inc. or its affiliates',
+                    '© Smartmart 2025',
                     style: TextStyle(fontSize: 12),
                   ),
                 ),

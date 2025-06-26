@@ -20,7 +20,7 @@ class SearchTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
-        hintText: 'Search Amazon.in',
+        hintText: 'Search Smartmart',
         hintStyle: const TextStyle(
             color: Colors.black45, fontWeight: FontWeight.normal),
         constraints: const BoxConstraints(maxHeight: 45, minHeight: 45),
