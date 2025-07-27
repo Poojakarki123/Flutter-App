@@ -21,20 +21,52 @@ class FetchCategoryProductsBloc
     try {
       List<Product> productList;
       List<double> averageRatingList = [];
-      double rating;
       emit(FetchCategoryProductsLoadingS());
 
       productList =
           await categoryProductRepository.fetchCategoryProducts(event.category);
       productList.shuffle();
 
-      for (int i = 0; i < productList.length; i++) {
-        rating = await accountRepository.getAverageRating(productList[i].id!);
-        averageRatingList.add(rating);
-      }
+// Fetch ratings in parallel for better performance
+      List<double> ratings = await Future.wait(
+        productList
+            .map((product) => accountRepository.getAverageRating(product.id!)),
+      );
+
+// Pair each product with its rating
+      List<MapEntry<Product, double>> pairedList = List.generate(
+        productList.length,
+        (index) => MapEntry(productList[index], ratings[index]),
+      );
+
+// Sort by rating in descending order
+      pairedList.sort((a, b) => b.value.compareTo(a.value));
+
+// Unpack sorted products and ratings
+      productList = pairedList.map((e) => e.key).toList();
+      averageRatingList = pairedList.map((e) => e.value).toList();
 
       emit(FetchCategoryProductsSuccessS(
-          productList: productList, averageRatingList: averageRatingList));
+        productList: productList,
+        averageRatingList: averageRatingList,
+      ));
+
+      // List<Product> productList;
+      // List<double> averageRatingList = [];
+      // double rating;
+      // emit(FetchCategoryProductsLoadingS());
+
+      // productList =
+      //     await categoryProductRepository.fetchCategoryProducts(event.category);
+      // productList.shuffle();
+
+      // for (int i = 0; i < productList.length; i++) {
+      //   rating = await accountRepository.getAverageRating(productList[i].id!);
+      //   averageRatingList.add(rating);
+      // }
+
+      // emit(FetchCategoryProductsSuccessS(
+      //     productList: productList, averageRatingList: averageRatingList));
     } catch (e) {
       emit(FetchCategoryProductsErrorS(errorString: e.toString()));
     }

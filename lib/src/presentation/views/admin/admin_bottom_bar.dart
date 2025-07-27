@@ -43,7 +43,7 @@ class AdminBottomBar extends StatelessWidget {
                     height: 45,
                     width: 120,
                     alignment: Alignment.centerLeft,
-                    child: Image.asset('assets/images/amazon_black_logo.png'),
+                    child: Text('Smartmart'),
                   ),
                   Row(
                     children: [

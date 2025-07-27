@@ -29,25 +29,25 @@ class SearchTextFormField extends StatelessWidget {
         enabledBorder: textFieldStyle,
         border: textFieldStyle,
         contentPadding: const EdgeInsets.only(top: 3),
-        suffixIcon: const SizedBox(
-          width: 75,
-          child: Row(
-            children: [
-              Icon(
-                Icons.center_focus_strong_outlined,
-                color: Colors.grey,
-              ),
-              Spacer(),
-              Icon(
-                Icons.mic_outlined,
-                color: Colors.grey,
-              ),
-              SizedBox(
-                width: 10,
-              )
-            ],
-          ),
-        ),
+        // suffixIcon: const SizedBox(
+        //   width: 75,
+        //   child: Row(
+        //     children: [
+        //       Icon(
+        //         Icons.center_focus_strong_outlined,
+        //         color: Colors.grey,
+        //       ),
+        //       Spacer(),
+        //       Icon(
+        //         Icons.mic_outlined,
+        //         color: Colors.grey,
+        //       ),
+        //       SizedBox(
+        //         width: 10,
+        //       )
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }

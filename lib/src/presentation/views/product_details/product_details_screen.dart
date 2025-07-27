@@ -352,8 +352,8 @@ class ProductDetailsScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const DividerWithSizedBox(),
-            const ProductQualityIcons(),
+            // const DividerWithSizedBox(),
+            // const ProductQualityIcons(),
             const DividerWithSizedBox(
               sB1Height: 4,
               sB2Height: 6,

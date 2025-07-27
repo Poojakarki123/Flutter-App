@@ -19,7 +19,7 @@ class BottomBar extends StatelessWidget {
   List<Widget> pages = [
     const HomeScreen(),
     const AccountScreen(),
-    const AnotherScreen(appBarTitle: 'More Screen'),
+    // const AnotherScreen(appBarTitle: 'More Screen'),
     const CartScreen(),
     const MenuScreen(),
   ];
@@ -74,24 +74,24 @@ class BottomBar extends StatelessWidget {
               currentIndex: state.index,
               bottomNavBarList: items(index: state.index, isOpen: state.isOpen),
               onTap: (page) {
-                if (page == 2) {
-                  if (state.isOpen) {
-                    BlocProvider.of<BottomBarBloc>(context)
-                        .add(BottomBarMoreClickedEvent(page, false));
-                    context
-                        .read<BottomBarBloc>()
-                        .add(BottomBarClickedEvent(index: lastIndex));
-                  } else {
-                    BlocProvider.of<BottomBarBloc>(context)
-                        .add(BottomBarMoreClickedEvent(page, true));
-                  }
-                } else {
-                  lastIndex = page;
+                // if (page == 2) {
+                //   if (state.isOpen) {
+                //     BlocProvider.of<BottomBarBloc>(context)
+                //         .add(BottomBarMoreClickedEvent(page, false));
+                //     context
+                //         .read<BottomBarBloc>()
+                //         .add(BottomBarClickedEvent(index: lastIndex));
+                //   } else {
+                //     BlocProvider.of<BottomBarBloc>(context)
+                //         .add(BottomBarMoreClickedEvent(page, true));
+                //   }
+                // } else {
+                lastIndex = page;
 
-                  context
-                      .read<BottomBarBloc>()
-                      .add(BottomBarClickedEvent(index: page));
-                }
+                context
+                    .read<BottomBarBloc>()
+                    .add(BottomBarClickedEvent(index: page));
+                // }
               },
             ));
       }
@@ -102,24 +102,24 @@ class BottomBar extends StatelessWidget {
               currentIndex: state.index,
               bottomNavBarList: items(index: state.index),
               onTap: (page) {
-                if (page == 2) {
-                  if (isOpen) {
-                    BlocProvider.of<BottomBarBloc>(context)
-                        .add(BottomBarMoreClickedEvent(page, false));
-                    context
-                        .read<BottomBarBloc>()
-                        .add(BottomBarClickedEvent(index: lastIndex));
-                  } else {
-                    BlocProvider.of<BottomBarBloc>(context)
-                        .add(BottomBarMoreClickedEvent(page, true));
-                  }
-                } else {
-                  lastIndex = page;
+                // if (page == 2) {
+                //   if (isOpen) {
+                //     BlocProvider.of<BottomBarBloc>(context)
+                //         .add(BottomBarMoreClickedEvent(page, false));
+                //     context
+                //         .read<BottomBarBloc>()
+                //         .add(BottomBarClickedEvent(index: lastIndex));
+                //   } else {
+                //     BlocProvider.of<BottomBarBloc>(context)
+                //         .add(BottomBarMoreClickedEvent(page, true));
+                //   }
+                // } else {
+                lastIndex = page;
 
-                  context
-                      .read<BottomBarBloc>()
-                      .add(BottomBarClickedEvent(index: page));
-                }
+                context
+                    .read<BottomBarBloc>()
+                    .add(BottomBarClickedEvent(index: page));
+                // }
               },
             ));
       }
@@ -144,25 +144,25 @@ class BottomBar extends StatelessWidget {
         page: 1,
         label: 'You',
       ),
-      bottomNavBarItem(
-        index: index,
-        iconName: 'more',
-        isOpen: isOpen,
-        page: 2,
-        label: 'More',
-      ),
+      // bottomNavBarItem(
+      //   index: index,
+      //   iconName: 'more',
+      //   isOpen: isOpen,
+      //   page: 2,
+      //   label: 'More',
+      // ),
       bottomNavBarItem(
         index: index,
         iconName: 'cart',
         isOpen: isOpen,
-        page: 3,
+        page: 2,
         label: 'Cart',
       ),
       bottomNavBarItem(
         index: index,
         iconName: 'menu',
         isOpen: isOpen,
-        page: 4,
+        page: 3,
         label: 'Menu',
       ),
     ];
@@ -183,7 +183,7 @@ class BottomBar extends StatelessWidget {
               width: 42,
               height: 5.5,
               decoration: BoxDecoration(
-                color: index == page && index != 2
+                color: index == page
                     ? Constants.selectedNavBarColor
                     : Colors.white,
                 borderRadius: const BorderRadius.only(

@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               const TopCategories(),
-              CarouselImage(),
+              // CarouselImage(),
               Container(
                 decoration:
                     const BoxDecoration(gradient: Constants.goldenGradient),
