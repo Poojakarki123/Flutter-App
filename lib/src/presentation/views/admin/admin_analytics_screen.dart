@@ -35,7 +35,7 @@ class AdminAnalyticsScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  'Total Earnings - ₹${formatLakhs(state.totalEarnings)}',
+                  'Total Earnings - रु${formatLakhs(state.totalEarnings)}',
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),

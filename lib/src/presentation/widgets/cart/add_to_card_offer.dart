@@ -75,7 +75,7 @@ class AddToCartOffer extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '₹ ${formatPriceWithDecimal(product.price)}',
+                    'रु ${formatPriceWithDecimal(product.price)}',
                     maxLines: 2,
                     style: const TextStyle(
                         fontSize: 16,

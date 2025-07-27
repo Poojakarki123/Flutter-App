@@ -52,7 +52,7 @@ class YouMightAlsoLikeSingle extends StatelessWidget {
             ),
           ),
           Text(
-            '₹$price.00',
+            'रु$price.00',
             maxLines: 2,
             style: const TextStyle(
                 fontSize: 16,

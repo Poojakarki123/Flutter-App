@@ -69,7 +69,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         color: Colors.black87),
                   ),
                   const Text(
-                    '₹',
+                    'रु',
                     style: TextStyle(
                         fontSize: 18,
                         color: Colors.black87,

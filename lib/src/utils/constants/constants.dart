@@ -257,17 +257,17 @@ class Constants {
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616730/multi_image_offers/multi_image_offer2/fy7cga8bnkhbwdczeojg.jpg',
-      'offerTitle': 'Under ₹299 | Kitchen accessories'
+      'offerTitle': 'Under रु299 | Kitchen accessories'
     },
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616730/multi_image_offers/multi_image_offer2/vpvy0tubzfu5xb7rdowo.jpg',
-      'offerTitle': 'Under ₹499 | Kitchen jars, containers & more'
+      'offerTitle': 'Under रु499 | Kitchen jars, containers & more'
     },
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616730/multi_image_offers/multi_image_offer2/ozc0y0aprcduz1k6mzbn.jpg',
-      'offerTitle': '₹499 - ₹999 | Cookware sets'
+      'offerTitle': 'रु499 - रु999 | Cookware sets'
     },
     {
       'image':
@@ -305,22 +305,22 @@ class Constants {
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616739/multi_image_offers/multi_image_offer4/sg6xeof7e8c6i8tdtn3a.png',
-      'offerTitle': 'Starting ₹79 | Cycles, helmets & more'
+      'offerTitle': 'Starting रु79 | Cycles, helmets & more'
     },
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616735/multi_image_offers/multi_image_offer4/gwknudygu8xkgbqwjhyh.png',
-      'offerTitle': 'Starting ₹99 | Cricket'
+      'offerTitle': 'Starting रु99 | Cricket'
     },
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616737/multi_image_offers/multi_image_offer4/ye374adnpqqw0g9rpdrh.png',
-      'offerTitle': 'Starting ₹99 | Badminton'
+      'offerTitle': 'Starting रु99 | Badminton'
     },
     {
       'image':
           'https://res.cloudinary.com/dthljz11q/image/upload/v1699616735/multi_image_offers/multi_image_offer4/j6qu404fobsayouau9et.png',
-      'offerTitle': 'Starting ₹49 | Fitness accessories & more'
+      'offerTitle': 'Starting रु49 | Fitness accessories & more'
     },
   ];
 
@@ -419,7 +419,7 @@ class Constants {
 
 List<SingleImageOffer> singleImageOffers = const [
   SingleImageOffer(
-    headTitle: 'Limited period offers on best-selling TVs | Starting ₹8,999',
+    headTitle: 'Limited period offers on best-selling TVs | Starting रु8,999',
     subTitle: 'Up to 18 months No Cost EMI',
     image:
         'https://res.cloudinary.com/dthljz11q/image/upload/v1699881799/single_image_offers/ulrpitq6hf4rocgo0m8w.jpg',
@@ -441,14 +441,14 @@ List<SingleImageOffer> singleImageOffers = const [
   ),
   SingleImageOffer(
     headTitle: 'Price crash | Amazon Brands & more',
-    subTitle: 'Under ₹499 | T-shirts & shirts',
+    subTitle: 'Under रु499 | T-shirts & shirts',
     image:
         'https://res.cloudinary.com/dthljz11q/image/upload/v1699881800/single_image_offers/kwfypkjyfqjsipniefav.png',
     productCategory: 'Fashion',
   ),
   SingleImageOffer(
     headTitle: 'Amazon coupons | Smartphones & accessories',
-    subTitle: 'Extra up to ₹2000 off with coupons',
+    subTitle: 'Extra up to रु2000 off with coupons',
     image:
         'https://res.cloudinary.com/dthljz11q/image/upload/v1699881799/single_image_offers/rmtbk89pmenhd3mulcus.jpg',
     productCategory: 'Mobiles',

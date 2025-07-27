@@ -56,7 +56,7 @@ class OrderedProducts extends StatelessWidget {
                   ),
                   const SizedBox(width: 20),
                   Text(
-                    '₹${formatPrice(widget.order.products[i].price)}',
+                    'रु${formatPrice(widget.order.products[i].price)}',
                     style: textSyle.copyWith(fontSize: 16),
                   ),
                 ],

@@ -29,7 +29,7 @@ class AmazonPayBannarAd extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Amazon Pay Later | Get instant credit up to ₹60,000',
+                    'Amazon Pay Later | Get instant credit up to रु60,000',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -45,7 +45,7 @@ class AmazonPayBannarAd extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                       children: [
                         TextSpan(
-                            text: '₹600',
+                            text: 'रु600',
                             style: TextStyle(
                                 fontSize: 14,
                                 color: Color(0xffC40202),

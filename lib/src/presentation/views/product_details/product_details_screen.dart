@@ -197,7 +197,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: '₹${formatPrice(product.price)}',
+                          text: 'रु${formatPrice(product.price)}',
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -451,7 +451,7 @@ class ProductDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              '₹',
+              'रु',
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.black,
@@ -476,7 +476,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black),
             children: [
               TextSpan(
-                text: 'from ₹${getEmi(product)}. No Cost EMI available.',
+                text: 'from रु${getEmi(product)}. No Cost EMI available.',
                 style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.normal,

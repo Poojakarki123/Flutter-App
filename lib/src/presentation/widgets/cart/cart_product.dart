@@ -106,7 +106,7 @@ class CartProduct extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          '₹',
+                          'रु',
                           style: TextStyle(
                               fontSize: 14,
                               color: Colors.black,

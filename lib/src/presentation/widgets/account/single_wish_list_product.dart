@@ -92,7 +92,7 @@ class SingleWishListProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
-                          '₹',
+                          'रु',
                           style: TextStyle(
                               fontSize: 18,
                               color: Colors.black,
