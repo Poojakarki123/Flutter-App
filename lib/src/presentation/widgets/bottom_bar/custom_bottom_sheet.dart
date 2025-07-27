@@ -43,7 +43,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
         children: [
           const Center(
               child: Text(
-            'Do more with Amazon',
+            'Do more with Smartmart',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
           )),
           const SizedBox(height: 10),

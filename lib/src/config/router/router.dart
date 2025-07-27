@@ -30,6 +30,8 @@ import 'package:flutter_amazon_clone_bloc/src/presentation/views/cart/cart_scree
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/category_products/category_products_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/home/home_screen.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/menu/menu_screen.dart';
+import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen.dart';
+import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen_buy_now.dart';
 // import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen.dart';
 // import 'package:flutter_amazon_clone_bloc/src/presentation/views/payment/payment_screen_buy_now.dart';
 import 'package:flutter_amazon_clone_bloc/src/presentation/views/product_details/product_details_screen.dart';
@@ -208,26 +210,26 @@ final router = GoRouter(initialLocation: '/', routes: [
       pageBuilder: (context, state) {
         return const MaterialPage(child: CartScreen());
       }),
-  // GoRoute(
-  //     name: AppRouteConstants.paymentScreenRoute.name,
-  //     path: AppRouteConstants.paymentScreenRoute.path,
-  //     pageBuilder: (context, state) {
-  //       double totalAmount = state.extra as double;
-  //       return MaterialPage(
-  //           child: PaymentScreen(totalAmount: totalAmount.toString()));
-  //     }),
-  // GoRoute(
-  //     name: AppRouteConstants.buyNowPaymentScreenRoute.name,
-  //     path: AppRouteConstants.buyNowPaymentScreenRoute.path,
-  //     pageBuilder: (context, state) {
-  //       Map<String, dynamic> extraData = state.extra as Map<String, dynamic>;
+  GoRoute(
+      name: AppRouteConstants.paymentScreenRoute.name,
+      path: AppRouteConstants.paymentScreenRoute.path,
+      pageBuilder: (context, state) {
+        double totalAmount = state.extra as double;
+        return MaterialPage(
+            child: PaymentScreen(totalAmount: totalAmount.toString()));
+      }),
+  GoRoute(
+      name: AppRouteConstants.buyNowPaymentScreenRoute.name,
+      path: AppRouteConstants.buyNowPaymentScreenRoute.path,
+      pageBuilder: (context, state) {
+        Map<String, dynamic> extraData = state.extra as Map<String, dynamic>;
 
-  //       Product product = extraData['product'] as Product;
-  //       return MaterialPage(
-  //           child: PaymentScreenBuyNow(
-  //         product: product,
-  //       ));
-  //     }),
+        Product product = extraData['product'] as Product;
+        return MaterialPage(
+            child: PaymentScreenBuyNow(
+          product: product,
+        ));
+      }),
   GoRoute(
       name: AppRouteConstants.trackingDetailsScreenRoute.name,
       path: AppRouteConstants.trackingDetailsScreenRoute.path,

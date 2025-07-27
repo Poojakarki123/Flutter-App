@@ -166,71 +166,139 @@ class _PaymentScreenBuyNowState extends State<PaymentScreenBuyNow> {
                           },
                           builder: (context, state) {
                             if (state is PlaceOrderBuyNowProcessS) {
-                              return GooglePayButton(
-                                onPressed: () {
-                                  addressToBeUsed = '';
-                                  bool isFromForm =
-                                      flatBuildingController.text.isNotEmpty ||
-                                          areaController.text.isNotEmpty ||
-                                          pincodeController.text.isNotEmpty ||
-                                          cityController.text.isNotEmpty;
+                              return ElevatedButton.icon(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Constants.secondaryColor,
+                                      foregroundColor: Colors.white,
+                                      textStyle: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                      padding: EdgeInsets.all(20)),
+                                  onPressed: () {
+                                    addressToBeUsed = '';
+                                    bool isFromForm = flatBuildingController
+                                            .text.isNotEmpty ||
+                                        areaController.text.isNotEmpty ||
+                                        pincodeController.text.isNotEmpty ||
+                                        cityController.text.isNotEmpty;
 
-                                  if (isFromForm) {
-                                    if (_addressFormKey.currentState!
-                                        .validate()) {
-                                      addressToBeUsed =
-                                          '${flatBuildingController.text}, ${areaController.text}, ${cityController.text}, ${pincodeController.text}';
+                                    if (isFromForm) {
+                                      if (_addressFormKey.currentState!
+                                          .validate()) {
+                                        addressToBeUsed =
+                                            '${flatBuildingController.text}, ${areaController.text}, ${cityController.text}, ${pincodeController.text}';
+
+                                        showSnackBar(context, 'Order placed!');
+                                        if (state.user.address == '') {
+                                          context
+                                              .read<UserCubit>()
+                                              .saveUserAddress(
+                                                  address: addressToBeUsed);
+                                        }
+
+                                        context
+                                            .read<PlaceOrderBuyNowCubit>()
+                                            .placeOrderBuyNow(
+                                                product: widget.product,
+                                                address: addressToBeUsed);
+                                        Navigator.pop(context);
+                                      } else {
+                                        throw Exception(
+                                            'Please enter all the values');
+                                      }
+                                    } else if (addressToBeUsed.isEmpty) {
+                                      addressToBeUsed = state.user.address;
                                     } else {
-                                      throw Exception(
-                                          'Please enter all the values');
+                                      showSnackBar(context, 'ERROR');
                                     }
-                                  } else if (addressToBeUsed.isEmpty) {
-                                    addressToBeUsed = state.user.address;
-                                  } else {
-                                    showSnackBar(context, 'ERROR');
-                                  }
-                                },
-                                width: double.infinity,
-                                height: 50,
-                                paymentConfiguration: snapshot.data!,
-                                paymentItems: state.paymentItems,
-                                type: GooglePayButtonType.order,
-                                margin: const EdgeInsets.only(top: 15.0),
-                                onPaymentResult: (res) {
-                                  showSnackBar(context, 'Order placed!');
-                                  if (state.user.address == '') {
-                                    context.read<UserCubit>().saveUserAddress(
-                                        address: addressToBeUsed);
-                                  }
-
-                                  context
-                                      .read<PlaceOrderBuyNowCubit>()
-                                      .placeOrderBuyNow(
-                                          product: widget.product,
-                                          address: addressToBeUsed);
-                                  Navigator.pop(context);
-                                },
-                                loadingIndicator: const Center(
-                                  child: CircularProgressIndicator(),
-                                ),
-                              );
+                                  },
+                                  label: Text("Pay with Cash on Delivery"));
                             }
+
+                            //    GooglePayButton(
+                            //     onPressed: () {
+                            //       addressToBeUsed = '';
+                            //       bool isFromForm =
+                            //           flatBuildingController.text.isNotEmpty ||
+                            //               areaController.text.isNotEmpty ||
+                            //               pincodeController.text.isNotEmpty ||
+                            //               cityController.text.isNotEmpty;
+
+                            //       if (isFromForm) {
+                            //         if (_addressFormKey.currentState!
+                            //             .validate()) {
+                            //           addressToBeUsed =
+                            //               '${flatBuildingController.text}, ${areaController.text}, ${cityController.text}, ${pincodeController.text}';
+                            //         } else {
+                            //           throw Exception(
+                            //               'Please enter all the values');
+                            //         }
+                            //       } else if (addressToBeUsed.isEmpty) {
+                            //         addressToBeUsed = state.user.address;
+                            //       } else {
+                            //         showSnackBar(context, 'ERROR');
+                            //       }
+                            //     },
+                            //     width: double.infinity,
+                            //     height: 50,
+                            //     paymentConfiguration: snapshot.data!,
+                            //     paymentItems: state.paymentItems,
+                            //     type: GooglePayButtonType.order,
+                            //     margin: const EdgeInsets.only(top: 15.0),
+                            //     onPaymentResult: (res) {
+                            //       showSnackBar(context, 'Order placed!');
+                            //       if (state.user.address == '') {
+                            //         context.read<UserCubit>().saveUserAddress(
+                            //             address: addressToBeUsed);
+                            //       }
+
+                            //       context
+                            //           .read<PlaceOrderBuyNowCubit>()
+                            //           .placeOrderBuyNow(
+                            //               product: widget.product,
+                            //               address: addressToBeUsed);
+                            //       Navigator.pop(context);
+                            //     },
+                            //     loadingIndicator: const Center(
+                            //       child: CircularProgressIndicator(),
+                            //     ),
+                            //   );
+                            // }
                             if (state is DisableButtonS) {
-                              return GPayDisabledButton(
-                                  flatBuildingController:
-                                      flatBuildingController,
-                                  areaController: areaController,
-                                  pincodeController: pincodeController,
-                                  cityController: cityController,
-                                  addressFormKey: _addressFormKey);
+                              return ElevatedButton.icon(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Constants.secondaryColor,
+                                      foregroundColor: Colors.white,
+                                      textStyle: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                      padding: EdgeInsets.all(20)),
+                                  label: Text("Pay with Cash on Delivery"));
+                              // return GPayDisabledButton(
+                              //     flatBuildingController:
+                              //         flatBuildingController,
+                              //     areaController: areaController,
+                              //     pincodeController: pincodeController,
+                              //     cityController: cityController,
+                              //     addressFormKey: _addressFormKey);
                             }
-
-                            return GPayDisabledButton(
-                                flatBuildingController: flatBuildingController,
-                                areaController: areaController,
-                                pincodeController: pincodeController,
-                                cityController: cityController,
-                                addressFormKey: _addressFormKey);
+                            return ElevatedButton.icon(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Constants.secondaryColor,
+                                    foregroundColor: Colors.white,
+                                    textStyle: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                    padding: EdgeInsets.all(20)),
+                                label: Text("Pay with Cash on Delivery"));
+                            // return GPayDisabledButton(
+                            //     flatBuildingController: flatBuildingController,
+                            //     areaController: areaController,
+                            //     pincodeController: pincodeController,
+                            //     cityController: cityController,
+                            //     addressFormKey: _addressFormKey);
                           },
                         )
                       : const SizedBox.shrink()),

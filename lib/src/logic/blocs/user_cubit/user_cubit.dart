@@ -7,7 +7,9 @@ part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> with HydratedMixin {
   final UserRepository userRepository;
-  UserCubit(this.userRepository) : super(UserInitialS());
+  UserCubit(this.userRepository) : super(UserInitialS()) {
+    hydrate();
+  }
 
   void setUser(User user) {
     emit(UserLoadingS());

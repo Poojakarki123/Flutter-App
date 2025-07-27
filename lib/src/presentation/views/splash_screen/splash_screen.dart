@@ -30,10 +30,14 @@ class SplashScreen extends StatelessWidget {
       }, builder: ((context, state) {
         return Scaffold(
           body: Center(
-            child: Image.asset(
-              'assets/images/amazon_in_alt.png',
-              height: 52,
+            child: Text(
+              "SMARTMART",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
+            // child: Image.asset(
+            //   'assets/images/amazon_in_alt.png',
+            //   height: 52,
+            // ),
           ),
         );
       })),

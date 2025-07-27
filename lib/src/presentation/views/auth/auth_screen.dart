@@ -49,11 +49,10 @@ class _AuthScreenState extends State<AuthScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(
-                  'assets/images/amazon_in.png',
-                  height: 40,
-                  width: 50,
+                SizedBox(
+                  height: 10,
                 ),
+                Text('Smartmart'),
                 const SizedBox.square(
                   dimension: 12,
                 ),
@@ -103,7 +102,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                             color: Colors.black),
                                       ),
                                       TextSpan(
-                                        text: 'New to Amazon?',
+                                        text: 'New to Smartmart?',
                                         style: TextStyle(
                                             fontSize: 13,
                                             color: Colors.black87),
@@ -322,7 +321,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                             color: Colors.black),
                                       ),
                                       TextSpan(
-                                        text: 'New to Amazon?',
+                                        text: 'New to Smartmart?',
                                         style: TextStyle(
                                             fontSize: 13,
                                             color: Colors.black87),

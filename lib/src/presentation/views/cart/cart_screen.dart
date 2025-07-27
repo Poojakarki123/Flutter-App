@@ -82,7 +82,8 @@ class CartScreen extends StatelessWidget {
                                             width: 180,
                                           ),
                                         ),
-                                        const Text('Your Amazon Cart is empty')
+                                        const Text(
+                                            'Your smartmart Cart is empty')
                                       ],
                                     ),
                                   )
@@ -272,7 +273,7 @@ class CartScreen extends StatelessWidget {
                           ),
                           CartIcon(
                             iconName: 'delivered_alt.png',
-                            title: 'Amazon Delivered',
+                            title: 'Smartmart Delivered',
                           ),
                         ],
                       ),
