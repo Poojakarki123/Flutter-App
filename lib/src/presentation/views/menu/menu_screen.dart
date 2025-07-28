@@ -17,36 +17,36 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
           preferredSize: Size.fromHeight(60), child: CustomAppBar()),
-      bottomSheet: BottomSheet(
-          onClosing: () {},
-          constraints: const BoxConstraints(maxHeight: 80, minHeight: 80),
-          builder: ((context) {
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CustomTextButton(
-                    buttonText: 'Orders',
-                    onPressed: () => context.pushNamed(
-                        AppRouteConstants.yourOrdersScreenRoute.name),
-                    isMenuScreenButton: true),
-                CustomTextButton(
-                    buttonText: 'History',
-                    onPressed: () => context.pushNamed(
-                        AppRouteConstants.browsingHistoryScreenRoute.name),
-                    isMenuScreenButton: true),
-                CustomTextButton(
-                    buttonText: 'Account',
-                    onPressed: () {},
-                    isMenuScreenButton: true),
-                CustomTextButton(
-                    buttonText: 'Wish List',
-                    onPressed: () => context.pushNamed(
-                        AppRouteConstants.yourWishListScreenRoute.name),
-                    isMenuScreenButton: true),
-              ],
-            );
-          })),
+      // bottomSheet: BottomSheet(
+      //     onClosing: () {},
+      //     constraints: const BoxConstraints(maxHeight: 80, minHeight: 80),
+      //     builder: ((context) {
+      //       return Row(
+      //         mainAxisAlignment: MainAxisAlignment.center,
+      //         crossAxisAlignment: CrossAxisAlignment.center,
+      //         children: [
+      //           CustomTextButton(
+      //               buttonText: 'Orders',
+      //               onPressed: () => context.pushNamed(
+      //                   AppRouteConstants.yourOrdersScreenRoute.name),
+      //               isMenuScreenButton: true),
+      //           CustomTextButton(
+      //               buttonText: 'History',
+      //               onPressed: () => context.pushNamed(
+      //                   AppRouteConstants.browsingHistoryScreenRoute.name),
+      //               isMenuScreenButton: true),
+      //           CustomTextButton(
+      //               buttonText: 'Account',
+      //               onPressed: () {},
+      //               isMenuScreenButton: true),
+      //           CustomTextButton(
+      //               buttonText: 'Wish List',
+      //               onPressed: () => context.pushNamed(
+      //                   AppRouteConstants.yourWishListScreenRoute.name),
+      //               isMenuScreenButton: true),
+      //         ],
+      //       );
+      //     })),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         decoration: const BoxDecoration(

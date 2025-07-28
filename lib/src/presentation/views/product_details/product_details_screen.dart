@@ -136,10 +136,10 @@ class ProductDetailsScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Visit the Store',
-                      style: TextStyle(color: Constants.selectedNavBarColor),
-                    ),
+                    // Text(
+                    //   'Visit the Store',
+                    //   style: TextStyle(color: Constants.selectedNavBarColor),
+                    // ),
                     BlocBuilder<AverageRatingCubit, AverageRatingState>(
                       builder: (context, state) {
                         if (state is AverageRatingLoadingS) {
@@ -179,8 +179,8 @@ class ProductDetailsScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const DividerWithSizedBox(),
-            priceEmi(),
+            // const DividerWithSizedBox(),
+            // priceEmi(),
             const DividerWithSizedBox(
               sB1Height: 15,
             ),
@@ -209,25 +209,25 @@ class ProductDetailsScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                RichText(
-                  text: TextSpan(
-                      text: 'FREE delivery ',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                        color: Constants.selectedNavBarColor,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: deliveryDate,
-                          style: const TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
-                          ),
-                        )
-                      ]),
-                ),
+                // RichText(
+                //   text: TextSpan(
+                //       text: 'FREE delivery ',
+                //       style: TextStyle(
+                //         fontSize: 15,
+                //         fontWeight: FontWeight.normal,
+                //         color: Constants.selectedNavBarColor,
+                //       ),
+                //       children: [
+                //         TextSpan(
+                //           text: deliveryDate,
+                //           style: const TextStyle(
+                //             fontSize: 15,
+                //             fontWeight: FontWeight.bold,
+                //             color: Colors.black87,
+                //           ),
+                //         )
+                //       ]),
+                // ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -301,30 +301,30 @@ class ProductDetailsScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.lock_outline,
-                      size: 18,
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Secure transaction',
-                      style: TextStyle(
-                          color: Constants.selectedNavBarColor, fontSize: 15),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  'Gift-wrap available.',
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400),
-                ),
+                // Row(
+                //   children: [
+                //     const Icon(
+                //       Icons.lock_outline,
+                //       size: 18,
+                //     ),
+                //     const SizedBox(
+                //       width: 10,
+                //     ),
+                //     Text(
+                //       'Secure transaction',
+                //       style: TextStyle(
+                //           color: Constants.selectedNavBarColor, fontSize: 15),
+                //     )
+                //   ],
+                // ),
+                // const SizedBox(height: 10),
+                // const Text(
+                //   'Gift-wrap available.',
+                //   style: TextStyle(
+                //       color: Colors.black87,
+                //       fontSize: 15,
+                //       fontWeight: FontWeight.w400),
+                // ),
                 const SizedBox(height: 14),
                 BlocBuilder<WishListCubit, WishListState>(
                   builder: (context, state) {

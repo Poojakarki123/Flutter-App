@@ -121,69 +121,69 @@ class CartScreen extends StatelessWidget {
                                       const SizedBox(
                                         height: 10,
                                       ),
-                                      Row(
-                                        children: [
-                                          const Text(
-                                            'EMI Available ',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w400,
-                                                color: Colors.black54),
-                                          ),
-                                          Text(
-                                            'Details',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w400,
-                                                color: Constants
-                                                    .selectedNavBarColor),
-                                          ),
-                                        ],
-                                      ),
+                                      // Row(
+                                      //   children: [
+                                      //     const Text(
+                                      //       'EMI Available ',
+                                      //       style: TextStyle(
+                                      //           fontSize: 14,
+                                      //           fontWeight: FontWeight.w400,
+                                      //           color: Colors.black54),
+                                      //     ),
+                                      //     Text(
+                                      //       'Details',
+                                      //       style: TextStyle(
+                                      //           fontSize: 14,
+                                      //           fontWeight: FontWeight.w400,
+                                      //           color: Constants
+                                      //               .selectedNavBarColor),
+                                      //     ),
+                                      //   ],
+                                      // ),
                                       const SizedBox(height: 10),
-                                      Row(
-                                        children: [
-                                          const Icon(
-                                            Icons.check_circle,
-                                            color: Constants.greenColor,
-                                            size: 25,
-                                          ),
-                                          const SizedBox(width: 6),
-                                          Expanded(
-                                            child: RichText(
-                                                text: TextSpan(
-                                                    text:
-                                                        'Your order is eligible for FREE Delivery. ',
-                                                    style: const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Constants
-                                                            .greenColor,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                    children: [
-                                                  const TextSpan(
-                                                    text:
-                                                        'Select this option at checkout. ',
-                                                    style: TextStyle(
-                                                        height: 1.4,
-                                                        fontSize: 14,
-                                                        color: Colors.black54,
-                                                        fontWeight:
-                                                            FontWeight.w400),
-                                                  ),
-                                                  TextSpan(
-                                                    text: 'Details ',
-                                                    style: TextStyle(
-                                                        fontSize: 14,
-                                                        color: Constants
-                                                            .selectedNavBarColor,
-                                                        fontWeight:
-                                                            FontWeight.w400),
-                                                  )
-                                                ])),
-                                          ),
-                                        ],
-                                      ),
+                                      // Row(
+                                      //   children: [
+                                      //     const Icon(
+                                      //       Icons.check_circle,
+                                      //       color: Constants.greenColor,
+                                      //       size: 25,
+                                      //     ),
+                                      //     const SizedBox(width: 6),
+                                      //     Expanded(
+                                      //       child: RichText(
+                                      //           text: TextSpan(
+                                      //               text:
+                                      //                   'Your order is eligible for FREE Delivery. ',
+                                      //               style: const TextStyle(
+                                      //                   fontSize: 14,
+                                      //                   color: Constants
+                                      //                       .greenColor,
+                                      //                   fontWeight:
+                                      //                       FontWeight.bold),
+                                      //               children: [
+                                      //             const TextSpan(
+                                      //               text:
+                                      //                   'Select this option at checkout. ',
+                                      //               style: TextStyle(
+                                      //                   height: 1.4,
+                                      //                   fontSize: 14,
+                                      //                   color: Colors.black54,
+                                      //                   fontWeight:
+                                      //                       FontWeight.w400),
+                                      //             ),
+                                      //             TextSpan(
+                                      //               text: 'Details ',
+                                      //               style: TextStyle(
+                                      //                   fontSize: 14,
+                                      //                   color: Constants
+                                      //                       .selectedNavBarColor,
+                                      //                   fontWeight:
+                                      //                       FontWeight.w400),
+                                      //             )
+                                      //           ])),
+                                      //     ),
+                                      //   ],
+                                      // ),
                                       const SizedBox(height: 10),
                                       CustomElevatedButton(
                                         buttonText: state.cartProducts.length ==
@@ -264,21 +264,21 @@ class CartScreen extends StatelessWidget {
                         ],
                       ),
                       const DividerWithSizedBox(),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          CartIcon(
-                            iconName: 'secure_payment.png',
-                            title: 'Secure Payment',
-                          ),
-                          CartIcon(
-                            iconName: 'delivered_alt.png',
-                            title: 'Smartmart Delivered',
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      const AmazonPayBannarAd(),
+                      // const Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //   children: [
+                      //     CartIcon(
+                      //       iconName: 'secure_payment.png',
+                      //       title: 'Secure Payment',
+                      //     ),
+                      //     CartIcon(
+                      //       iconName: 'delivered_alt.png',
+                      //       title: 'Smartmart Delivered',
+                      //     ),
+                      //   ],
+                      // ),
+                      // const SizedBox(height: 15),
+                      // const AmazonPayBannarAd(),
                       const SizedBox(height: 15),
                       state.saveForLaterProducts.isEmpty
                           ? const SizedBox()
